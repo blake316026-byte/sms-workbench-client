@@ -1,0 +1,4 @@
+cb097aba7ccf35826809da8088a26504b963fe7f1bc04e2d9d38eadd86ceaea5  SMS-Upgrade-full-macOS-universal-v0.4.1.dmg
+70f6d7dbb61043671532c17f45f76ce0e9a46c4517e70098db87f62f4d07838e  SMS-Upgrade-public-macOS-universal-v0.4.1.dmg
+b9436533776b3921f0f74f882d3f4512bd0deeef56af2cef3431a35b3a006f57  SMS-Upgrade-full-Windows-x64-v0.4.1.zip
+784fb2708a144b7c19fd7be0ea2f60f20ca1858e319a419ef2606862b2a893ab  SMS-Upgrade-public-Windows-x64-v0.4.1.zip
