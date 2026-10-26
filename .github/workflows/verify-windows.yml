@@ -7,7 +7,9 @@ on:
         required: true
         default: v0.5.0
 permissions:
-  contents: read
+  # GitHub requires push access to read unpublished draft release assets.
+  # The token is passed only to the download step; no repository writes occur.
+  contents: write
 jobs:
   native-check:
     runs-on: windows-latest
