@@ -41,10 +41,10 @@ jobs:
             $env:SMS_MONITOR_LOCAL_AUTOMATION_RESULT = Join-Path $env:RUNNER_TEMP "sms-check-$pass.txt"
             $process = Start-Process -FilePath $exe -PassThru
             if (!$process.WaitForExit(180000)) { $process.Kill(); throw 'Candidate timed out' }
-            if ($process.ExitCode -ne 0) { throw "Candidate exit code $($process.ExitCode)" }
             if (!(Test-Path $env:SMS_MONITOR_LOCAL_AUTOMATION_RESULT)) { throw 'No verification result produced' }
             $result = Get-Content $env:SMS_MONITOR_LOCAL_AUTOMATION_RESULT -Raw
             Write-Output "Launch $pass : $result"
+            if ($process.ExitCode -ne 0) { throw "Candidate exit code $($process.ExitCode): $result" }
             if (!$result.StartsWith('PASS:')) { throw $result }
           }
       - uses: actions/upload-artifact@v4
