@@ -1,15 +1,17 @@
 # SMS Workbench Client
 
-**统一完整版 v0.5.0**。每个系统只有一个下载包，新用户和两种旧版用户共用，不再区分 full/public。
+**统一完整版 v0.5.1**。每个系统只有一个下载包，新用户和两种旧版用户共用，不再区分 full/public。
+
+本次修复天成充值总开关联动子渠道后批量操作中断的问题，支持充值子渠道独立开关，并在确认清单列出联动范围。子渠道只控制充值，提现查看主渠道行。
 
 ## 下载
 
 | 系统 | 统一下载 |
 | --- | --- |
-| macOS 13+，Apple Silicon / Intel | [下载 macOS 安装包](https://github.com/blake316026-byte/sms-workbench-client/releases/download/v0.5.0/SMS-Workbench-macOS-universal-v0.5.0.dmg) |
-| Windows 10/11 x64 | [下载 Windows 客户端](https://github.com/blake316026-byte/sms-workbench-client/releases/download/v0.5.0/SMS-Workbench-Windows-x64-v0.5.0.zip) |
+| macOS 13+，Apple Silicon / Intel | [下载 macOS 安装包](https://github.com/blake316026-byte/sms-workbench-client/releases/download/v0.5.1/SMS-Workbench-macOS-universal-v0.5.1.dmg) |
+| Windows 10/11 x64 | [下载 Windows 客户端](https://github.com/blake316026-byte/sms-workbench-client/releases/download/v0.5.1/SMS-Workbench-Windows-x64-v0.5.1.zip) |
 
-[最新版本说明](https://github.com/blake316026-byte/sms-workbench-client/releases/latest) · [SHA-256 校验值](https://github.com/blake316026-byte/sms-workbench-client/releases/download/v0.5.0/SHA256SUMS-v0.5.0.txt)
+[最新版本说明](https://github.com/blake316026-byte/sms-workbench-client/releases/latest) · [SHA-256 校验值](https://github.com/blake316026-byte/sms-workbench-client/releases/download/v0.5.1/SHA256SUMS-v0.5.1.txt)
 
 ## 功能与数据
 
