@@ -1,17 +1,17 @@
 # SMS Workbench Client
 
-**统一完整版 v0.5.2**。每个系统只有一个下载包，新用户和两种旧版用户共用，不再区分 full/public。
+**统一完整版 v0.5.3**。每个系统只有一个下载包，新用户和两种旧版用户共用，不再区分 full/public。
 
-本次修复后台自动登录恢复：未点击平台标签、短信和财务监控关闭时，已开启自动登录的平台也会独立检查。动态码按实际执行时间生成，天成登录表单未就绪时安全等待；人工接管和提交结果不明确时暂停，不盲目重试。
+本次修复部分已登录的天成平台没有显示今日充值、提现金额的问题，兼容新版页面并自动恢复延迟加载的数据查询。仅开启数据监控时也能查询和手动刷新；登录失效、无权限和查询失败保留实际提示，不显示为 0。保留上一版后台自动登录恢复及全部已发布功能。
 
 ## 下载
 
 | 系统 | 统一下载 |
 | --- | --- |
-| macOS 13+，Apple Silicon / Intel | [下载 macOS 安装包](https://github.com/blake316026-byte/sms-workbench-client/releases/download/v0.5.2/SMS-Workbench-macOS-universal-v0.5.2.dmg) |
-| Windows 10/11 x64 | [下载 Windows 客户端](https://github.com/blake316026-byte/sms-workbench-client/releases/download/v0.5.2/SMS-Workbench-Windows-x64-v0.5.2.zip) |
+| macOS 13+，Apple Silicon / Intel | [下载 macOS 安装包](https://github.com/blake316026-byte/sms-workbench-client/releases/download/v0.5.3/SMS-Workbench-macOS-universal-v0.5.3.dmg) |
+| Windows 10/11 x64 | [下载 Windows 客户端](https://github.com/blake316026-byte/sms-workbench-client/releases/download/v0.5.3/SMS-Workbench-Windows-x64-v0.5.3.zip) |
 
-[最新版本说明](https://github.com/blake316026-byte/sms-workbench-client/releases/latest) · [SHA-256 校验值](https://github.com/blake316026-byte/sms-workbench-client/releases/download/v0.5.2/SHA256SUMS-v0.5.2.txt)
+[最新版本说明](https://github.com/blake316026-byte/sms-workbench-client/releases/latest) · [SHA-256 校验值](https://github.com/blake316026-byte/sms-workbench-client/releases/download/v0.5.3/SHA256SUMS-v0.5.3.txt)
 
 ## 功能与数据
 
