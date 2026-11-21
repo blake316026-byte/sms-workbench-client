@@ -5,7 +5,7 @@ on:
       tag:
         description: Draft candidate release tag
         required: true
-        default: v0.5.6
+        default: v0.5.7
 permissions:
   # GitHub requires push access to read unpublished draft release assets.
   # The token is passed only to the download step; no repository writes occur.
@@ -38,7 +38,7 @@ jobs:
         shell: pwsh
         run: |
           ./scripts/verify-unsigned-release.ps1 -AppDirectory 'unpacked/SMS Client'
-      - name: Native startup, DPAPI, Cookies and two legacy upgrades
+      - name: Native memory, detachable tabs, authentication, startup and two legacy upgrades
         shell: pwsh
         run: |
           $env:SMS_DISTRIBUTION_TEST_DIR = Join-Path $env:RUNNER_TEMP 'sms-release-profile'
@@ -53,9 +53,13 @@ jobs:
             Write-Output "Launch $pass : $result"
             if ($process.ExitCode -ne 0) { throw "Candidate exit code $($process.ExitCode): $result" }
             if (!$result.StartsWith('PASS:')) { throw $result }
+            if (!$result.Contains('original WebContents detach/return/close')) { throw 'Missing detachable-window verification' }
+            if (!$result.Contains('inactive NPG/TC memory shell')) { throw 'Missing memory verification' }
           }
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: windows-native-results
-          path: ${{ runner.temp }}/sms-check-*.txt
+          path: |
+            ${{ runner.temp }}/sms-check-*.txt
+            ${{ runner.temp }}/sms-release-profile/detached-*.png
