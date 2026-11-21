@@ -5,7 +5,7 @@ on:
       tag:
         description: Draft candidate release tag
         required: true
-        default: v0.5.0
+        default: v0.5.5
 permissions:
   # GitHub requires push access to read unpublished draft release assets.
   # The token is passed only to the download step; no repository writes occur.
@@ -15,6 +15,9 @@ jobs:
     runs-on: windows-latest
     timeout-minutes: 15
     steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - name: Download candidate
         shell: pwsh
         env:
@@ -31,6 +34,10 @@ jobs:
           $expected = ($line -split '\s+')[0]
           if ((Get-FileHash $zip.FullName -Algorithm SHA256).Hash.ToLower() -ne $expected) { throw 'Candidate checksum mismatch' }
           Expand-Archive $zip.FullName -DestinationPath unpacked
+      - name: Verify explicit unsigned release inventory
+        shell: pwsh
+        run: |
+          ./scripts/verify-unsigned-release.ps1 -AppDirectory 'unpacked/SMS Client'
       - name: Native startup, DPAPI, Cookies and two legacy upgrades
         shell: pwsh
         run: |

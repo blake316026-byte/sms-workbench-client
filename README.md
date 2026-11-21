@@ -1,17 +1,17 @@
 # SMS Workbench Client
 
-**统一完整版 v0.5.4**。每个系统只有一个下载包，新用户和两种旧版用户共用，不再区分 full/public。
+**统一完整版 v0.5.5**。每个系统只有一个下载包，新用户和两种旧版用户共用，不再区分 full/public。Windows 为未签名版。
 
-本次新增天成登录后的定期 Google 身份验证恢复：已保存有效账号及 Google 密钥、开启自动登录后，不点击平台标签也能处理符合条件的定期验证，并回读确认结果。支付或配置操作触发的验证仍交给用户，不自动提交、不自动重试业务操作。保留上一版财务查询、后台自动登录及全部已发布功能。
+本次修复 macOS 网页“汇入／上传”点击无反应，恢复系统文件选择框。新增待处理订单创建时间、等待时长筛选和提现挂单 TG 报警，可勾选报警平台。保留天成定期 Google 验证恢复、财务查询、后台自动登录及全部已发布功能。支付或配置操作不自动提交、不自动重试。
 
 ## 下载
 
 | 系统 | 统一下载 |
 | --- | --- |
-| macOS 13+，Apple Silicon / Intel | [下载 macOS 安装包](https://github.com/blake316026-byte/sms-workbench-client/releases/download/v0.5.4/SMS-Workbench-macOS-universal-v0.5.4.dmg) |
-| Windows 10/11 x64 | [下载 Windows 客户端](https://github.com/blake316026-byte/sms-workbench-client/releases/download/v0.5.4/SMS-Workbench-Windows-x64-v0.5.4.zip) |
+| macOS 13+，Apple Silicon / Intel | [下载 macOS 安装包](https://github.com/blake316026-byte/sms-workbench-client/releases/download/v0.5.5/SMS-Workbench-macOS-universal-v0.5.5.dmg) |
+| Windows 10/11 x64 | [下载 Windows 客户端](https://github.com/blake316026-byte/sms-workbench-client/releases/download/v0.5.5/SMS-Workbench-Windows-x64-v0.5.5.zip) |
 
-[最新版本说明](https://github.com/blake316026-byte/sms-workbench-client/releases/latest) · [SHA-256 校验值](https://github.com/blake316026-byte/sms-workbench-client/releases/download/v0.5.4/SHA256SUMS-v0.5.4.txt)
+[最新版本说明](https://github.com/blake316026-byte/sms-workbench-client/releases/latest) · [SHA-256 校验值](https://github.com/blake316026-byte/sms-workbench-client/releases/download/v0.5.5/SHA256SUMS-v0.5.5.txt)
 
 ## 功能与数据
 
@@ -31,6 +31,16 @@
 
 ## 安全提示
 
-macOS 包为临时签名，未经 Apple 公证；Windows 包未使用商业代码签名证书，系统可能提示未知发布者。请核对来源和 SHA-256，通过系统提供的方式允许可信应用，不要关闭安全保护。
+macOS 包为临时签名，未经 Apple 公证；Windows 包未使用商业代码签名证书，系统可能提示未知发布者或阻止运行。先核对来源和 SHA-256。
+
+### Windows 智能应用控制拦截
+
+若提示“智能应用控制已阻止可能不安全的应用”，并且你信任本包、理解风险且有设备管理权限，可手动进入：
+
+**Windows 安全中心 → 应用和浏览器控制 → 智能应用控制设置 → 关闭**，确认提示后重开客户端。
+
+这会影响整台电脑，不是只放行本应用；目前没有单个应用例外。不要关闭 Defender 实时保护或防火墙。能否重新开启取决于 Windows 更新和设备状态，以本机提示为准，旧系统可能需要重置。不愿降低防护时请保留开启，不运行未签名包。组织设备请联系管理员，客户端不会自动关闭安全保护。
+
+[完整说明与微软官方指引](WINDOWS.md)。不同的 SmartScreen 或病毒检测提示不要套用此方法。
 
 仅分发原始安装包，不要分发使用后的用户数据目录或备份。本仓库只发布安装包、说明和验证流程，不含开发源码、私人配置或业务数据。旧版本仅作为历史归档，新装和升级都使用上方统一下载。
