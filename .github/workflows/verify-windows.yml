@@ -5,7 +5,7 @@ on:
       tag:
         description: Draft candidate release tag
         required: true
-        default: v0.5.7
+        default: v0.5.8
 permissions:
   # GitHub requires push access to read unpublished draft release assets.
   # The token is passed only to the download step; no repository writes occur.

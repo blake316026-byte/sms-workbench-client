@@ -1,17 +1,17 @@
 # SMS Workbench Client
 
-**统一完整版 v0.5.7**。每个系统只有一个下载包，新用户和两种旧版用户共用，不再区分 full/public。Windows 为未签名版。
+**统一完整版 v0.5.8**。每个系统只有一个下载包，新用户和两种旧版用户共用，不再区分 full/public。Windows 为未签名版。
 
-本次同步更新 macOS 和 Windows：优化闲置平台的内存占用，保留自动登录、定期 Google 验证和数据查询；平台标签可拖出为独立窗口，也可拖回或关闭后收回，保留原页面与登录会话；修复留存表格读取与日期匹配诊断，统计日期偏移不改变定时执行时间。支付和配置操作期间不回收页面，不自动重试提交。保留全部已发布功能。
+本次同步更新 macOS 和 Windows：进一步减少闲置 NPG／天成后台重页面驻留，已有近期有效数据查询的平台不再无谓地反复加载页面。保留自动登录、定期 Google 验证、数据查询、标签拖出／拖回和留存同步修复。当前页、独立窗口、已操作表单和执行中的任务继续受到保护，支付和配置提交不自动重试。全部已发布功能保留。
 
 ## 下载
 
 | 系统 | 统一下载 |
 | --- | --- |
-| macOS 13+，Apple Silicon / Intel | [下载 macOS 安装包](https://github.com/blake316026-byte/sms-workbench-client/releases/download/v0.5.7/SMS-Workbench-macOS-universal-v0.5.7.dmg) |
-| Windows 10/11 x64 | [下载 Windows 客户端](https://github.com/blake316026-byte/sms-workbench-client/releases/download/v0.5.7/SMS-Workbench-Windows-x64-v0.5.7.zip) |
+| macOS 13+，Apple Silicon / Intel | [下载 macOS 安装包](https://github.com/blake316026-byte/sms-workbench-client/releases/download/v0.5.8/SMS-Workbench-macOS-universal-v0.5.8.dmg) |
+| Windows 10/11 x64 | [下载 Windows 客户端](https://github.com/blake316026-byte/sms-workbench-client/releases/download/v0.5.8/SMS-Workbench-Windows-x64-v0.5.8.zip) |
 
-[最新版本说明](https://github.com/blake316026-byte/sms-workbench-client/releases/latest) · [SHA-256 校验值](https://github.com/blake316026-byte/sms-workbench-client/releases/download/v0.5.7/SHA256SUMS-v0.5.7.txt)
+[最新版本说明](https://github.com/blake316026-byte/sms-workbench-client/releases/latest) · [SHA-256 校验值](https://github.com/blake316026-byte/sms-workbench-client/releases/download/v0.5.8/SHA256SUMS-v0.5.8.txt)
 
 ## 功能与数据
 
