@@ -1,0 +1,2 @@
+d5e626a8a2774c80db53fbd98926cdf1092c47dcd3f9ccc0cd918aaf74557d69  SMS-Workbench-macOS-universal-v0.5.9.dmg
+d0878f0489622f935202ae797e389534212aebd85107d08e7ff1dd05ac37904f  SMS-Workbench-Windows-x64-v0.5.9.zip
